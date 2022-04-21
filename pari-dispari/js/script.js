@@ -20,34 +20,33 @@ console.log(userComputer);
 let sumNumber = userNumber + userComputer;
 console.log(sumNumber);
 
-//Calcola il resto della divisione per due della somma
-const rest = sumNumber % 2;
-console.log(rest);
-
 //Stabilisci la condizione: se è 0 il numero è pari, altrimenti è dispari
-const result = resultNumberFunction();
+const result = isEvenOrOdd(sumNumber);
 console.log(result);
 
 //Confronta i risultati e stabilisci il vincitore
-const winner = userWinFunction();
+const winner = userWinFunction(result, userChoice);
 console.log(winner);
 
 
 //FUNCTION
-function resultNumberFunction() {
-    let resultNumber
+function isEvenOrOdd(number) {
+    let resultNumber = '';
+    //Calcola il resto della divisione per due della somma
+    const rest = number % 2;
+
     if (rest === 0) {
-    resultNumber = "pari";
+        resultNumber = "pari";
     } else {
-    resultNumber = "dispari";
+        resultNumber = "dispari";
     }
     return resultNumber;
 }
+ 
 
-
-function userWinFunction() {
+function userWinFunction(str1, str2) {
     let userWin;
-    if ( result === userChoice) {
+    if (str1 === str2) {
         userWin = "Ha vinto User";
     } else { 
         userWin = "Ha vinto Computer";
