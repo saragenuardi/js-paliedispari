@@ -15,14 +15,15 @@ let reverseWord = wordPalindrome(userWord);
 if (reverseWord === userWord) {
     result = true;
 }
-console.log("La parola che inserito è un palindroma", result);
+console.log("La parola che hai inserito è un palindroma", result);
 
 //function
 function wordPalindrome(word) {
     let reverse = '';
-    for (let index = userWord.length - 1; index >= 0; index--) {
-    const char = userWord[index];
+    for (let index = word.length - 1; index >= 0; index--) {
+    const char = word[index];
     reverse += char;
-    return reverse;
+    console.log(reverse);
     }
+    return reverse;
 }
